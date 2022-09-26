@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import simplejson as json
 import sys
 import time
