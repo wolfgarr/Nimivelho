@@ -50,9 +50,8 @@ def create_user():
     phoneNumber = input('  phone number: ')
 
     if is_phone_number_on_list(phoneNumber):
-        verify = input('WARNING: phone number is already on the list, continue anyway [y/n]?: ')
-        if not verify.lower() == 'y':
-            return None
+        print('ERROR: phone number is already on the list, it needs to be unique')
+        return None
 
     if not verify_phone_number(phoneNumber):
         verify = input('WARNING: phone number format not recognized (must be in international format), continue anyway [y/n]?: ')
