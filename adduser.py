@@ -60,7 +60,7 @@ def create_user():
 
     user.PhoneNumber = [phoneNumber]
 
-    verify = input(f'Create user: {user} [y/n]?: ')
+    verify = input('Create user: ' + str(user) + ' [y/n]?: ')
 
     if verify.lower() == 'y':
         user.uid = hex(int(time.time()))
@@ -78,6 +78,6 @@ if new_user is not None:
         write_to_file(users)
         print('User created')
     except Exception as e:
-        print(f'An error occurred, please contact some nerd! {e}')
+        print('An error occurred, please contact some nerd! ' + str(e))
 else:
     print('Canceled')
