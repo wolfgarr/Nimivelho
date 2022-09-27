@@ -32,7 +32,7 @@ def read_user_data():
 
 def verify_phone_number(phone):
     return phone.startswith('+') \
-        and len(phone) >= 8 \
+        and len(phone) == 13 \
         and phone[1:len(phone)].isnumeric()
 
 
